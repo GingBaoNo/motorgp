@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riders</title>
+    <link
+      rel="stylesheet"
+      href="./assets/themify-icons-font/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/riders.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div th:replace="~{home/fragments/header :: header}"></div>
+      <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
+      <div class="content">
+        <div class="news">
+          <div class="image"></div>
+          <span>Official</span>
+        </div>
+
+        <div class="row place-list">
+          <div class="place-item">
+            <img
+              src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=700&width=900"
+              alt="Rider"
+              class="place-img"
+            />
+            <div class="place-body">
+              <p class="place-desc">Raindrops stopped falling on his head</p>
+              <p class="place-time">10 Sep 2024</p>
+            </div>
+          </div>
+
+          <div class="place-item">
+            <img
+              src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=700&width=900"
+              alt="Rider"
+              class="place-img"
+            />
+            <div class="place-body">
+              <p class="place-desc">
+                Emilia-Romagna GP: Everything you need to know before Round 14!
+              </p>
+              <p class="place-time">18 Sep 2024</p>
+            </div>
+          </div>
+
+          <div class="place-item">
+            <img
+              src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=700&width=900"
+              alt="Rider"
+              class="place-img"
+            />
+            <div class="place-body">
+              <p class="place-desc">
+                TIME SCHEDULE: Emilia-Romagna Grand Prix sees Sunday changes
+              </p>
+              <p class="place-time">13 Sep 2024</p>
+            </div>
+          </div>
+
+          <div class="place-item">
+            <img
+              src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=700&width=900"
+              alt="Rider"
+              class="place-img"
+            />
+            <div class="place-body">
+              <p class="place-desc">
+                2025 MotoGP™ rider line-up: confirmed signings and latest
+                rumours
+              </p>
+              <p class="place-time">19 Sep 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div th:replace="~{home/fragments/footer :: footer}"></div>
+    </div>
+  </body>
+</html>

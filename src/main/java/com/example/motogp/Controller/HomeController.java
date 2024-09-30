@@ -2,11 +2,10 @@ package com.example.motogp.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-    @RequestMapping("")
+    @GetMapping("/")
     public String Home(){
         return "index";
     }
@@ -14,5 +13,15 @@ public class HomeController {
     @GetMapping("/login.html")
     public String Login(){
         return "login";
+    }
+
+    @GetMapping("/riders.html")
+    public String rider(){
+        return "riders";
+    }
+
+    @GetMapping("/teams.html")
+    public String team(){
+        return "teams";
     }
 }
