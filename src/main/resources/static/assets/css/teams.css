@@ -1,27 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 html {
-  font-size: 100%;
+  /* font-size: 100%; */
   font-family: Arial, Helvetica, sans-serif;
 }
-.main {
-}
-.col {
-  float: left;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.col-full {
-  width: 100%;
-}
-.col-third {
-  width: calc(100% / 3);
-}
-.mt-16 {
-  margin-top: 16px !important;
-}
+
 .header {
   height: auto;
   background-color: #000;
@@ -157,7 +143,7 @@ html {
 .slider .leader-board {
   background-image: url(https://adsx.motogp.com/2024_Videopass/Asian%20Drop/LDB/MGP_2024_VP_Asian-Drop_Banner_LDB_728x100.gif);
   height: 100px;
-  padding-top: 10px;
+  margin-top: 14px;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
@@ -187,54 +173,66 @@ html {
 }
 
 /* place */
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
 .place-list {
-  margin: 32px -8px;
-  box-shadow: 10px 10px;
-  min-height: 247.33;
+  background-color: #ccc;
+  --spacing: 25px;
+  --columns: 4;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Căn giữa các mục theo chiều ngang */
-  gap: 20px; /* Khoảng cách giữa các mục */
+  justify-content: center; /* Căn giữa các mục */
+  gap: var(--spacing); /* Khoảng cách giữa các mục */
+  margin-bottom: 30px;
+  padding-left: var(--spacing); /* Khoảng cách lề trái */
+  padding-right: var(--spacing); /* Khoảng cách lề phải */
+  margin-top: 20px;
 }
-.place-item {
-  float: left;
-  /* width: calc(100% /5 - 29px); */
-  width: calc(100% / 5);
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 8px;
-  display: flex;
-  flex-direction: column; /* Xếp chồng hình ảnh và văn bản theo chiều dọc */
-  align-items: center; /* Căn giữa các mục bên trong mỗi place-item */
-  justify-content: space-between;
+
+.place-list .rider-card {
+  flex-basis: calc(
+    (100% / var(--columns)) - var(--spacing)
+  ); /* Chiều rộng các mục */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
   height: auto;
 }
-.place-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
+
+.place-list .rider-card:nth-last-child(-n + 2) {
+  flex-basis: calc(
+    (100% / var(--columns)) - var(--spacing)
+  ); /* Đảm bảo chiều rộng giống với hàng trên */
 }
-.place-img:hover {
+
+.place-list .riders-img {
+  width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+  object-fit: contain; /* Giữ nguyên tỉ lệ và không cắt mất phần nào */
+}
+.place-list .riders-img:hover {
   opacity: 0.6;
 }
-.place-body {
-  padding: 16px;
-  background-color: #fff;
+.place-list .id-rider {
+  padding: 15px 30px 0 30px;
+  font-size: 30px;
+  display: block;
+  line-height: 1;
+  color: #fff;
+}
+.place-list .rider-list__info-name {
   font-size: 15px;
-  flex-grow: 1;
+  font-weight: 500;
+  padding: 10px 0 30px 30px;
+  display: inline-block;
 }
-.place-heading {
-  font-size: 15px;
-  font-weight: 600;
+
+.place-list .rider-name {
+  padding: 5px 0;
 }
-.place-time {
-  color: #757575;
-  margin-top: 15px;
-}
-.place-desc {
-  margin-top: 15px;
-  line-height: 1.4;
-}
+
 /* footer */
 #footer {
   padding: 64px 16px;
