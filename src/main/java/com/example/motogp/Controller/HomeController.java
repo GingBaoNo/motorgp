@@ -24,4 +24,9 @@ public class HomeController {
     public String team(){
         return "teams";
     }
+
+    @GetMapping("/calendar.html")
+    public String calendar(){
+        return "calendar";
+    }
 }
