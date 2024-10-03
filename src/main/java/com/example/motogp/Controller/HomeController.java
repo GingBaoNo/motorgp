@@ -29,4 +29,9 @@ public class HomeController {
     public String calendar(){
         return "calendar";
     }
+
+    @GetMapping("/results.html")
+    public String result(){
+        return "results";
+    }
 }
