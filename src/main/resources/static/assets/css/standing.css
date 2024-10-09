@@ -169,46 +169,6 @@ select {
     margin: 4.8rem 4.8rem 2.4rem;
 }
 
-.results-table__weather {
-    display: flex;
-    background: #fff;
-    justify-content: flex-start;
-    padding: 1rem 0;
-}
-
-.results-table__weather-column:first-of-type {
-    margin: 0 -1.6rem 0 1.6rem;
-    justify-content: center;
-}
-
-.results-table__weather-column {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2.4rem;
-}
-
-.results-table__weather-icon {
-    color: #585e65;
-    font-size: 1.6rem;
-}
-
-.results-table__weather-header--cell {
-    color: #585e65;
-}
-.results-table__weather-header {
-    font-size: 0.8rem;
-    color: #9fa0a4;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.results-table__weather-cell {
-    font-size: 1rem;
-    line-height: 1.2;
-    color: #585e65;
-    font-weight: 700;
-}
-
 .results-table__table {
     width: 100%;
     /* table-layout: fixed; */
@@ -251,6 +211,7 @@ select {
     border-bottom: .1rem solid #ededed;
 }
 
+
 .results-table__body-cell .results-table__body-cell--pos-points 
 .u-show-tablet {
     border-left: 4px solid rgb(157, 180, 217);
@@ -284,7 +245,7 @@ select {
 }
 
 .results-table__body-cell {
-    /* color: #171c21; */
+    color: #171c21;
     padding: 0 1rem 0 1.6rem;
     position: relative;
     font-size: 1.4rem;
@@ -353,7 +314,7 @@ select {
     text-align: right;
     font-weight: 600;
     font-size: 1rem;
-}
+}   
 
 .results-table__body-cell--number {
     color: #9fa0a4;
