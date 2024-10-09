@@ -17,6 +17,11 @@ html {
   z-index: 1000;
 }
 
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
 #nav {
   display: flex; /* Flexbox để căn ngang các phần tử */
   align-items: center; /* Căn giữa các phần tử theo chiều dọc */

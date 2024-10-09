@@ -408,3 +408,94 @@ select {
 #footer .copy-right a {
   color: rgba(0, 0, 0, 0.4);
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: auto;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#nav {
+  display: flex; /* Flexbox để căn ngang các phần tử */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  justify-content: space-between;
+}
+.login {
+  margin-left: auto; /* Đẩy phần tử login ra bên phải */
+}
+.login li a {
+  color: #fff;
+}
+#nav li {
+  display: inline-block;
+  list-style-type: none; /* Loại bỏ ký hiệu bullet nếu có */
+  position: relative;
+}
+#nav > li > a {
+  color: #fff;
+  padding: 0 25px;
+  line-height: 40px;
+}
+#nav li a {
+  text-decoration: none;
+  line-height: 60px;
+  display: inline-block;
+  padding: 0 30px;
+  border-radius: 10px; /*bo tròn lại*/
+}
+.login:hover {
+  border-radius: 10px;
+}
+#nav > li:hover > a,
+.login:hover a {
+  color: #fff;
+  background-color: rgb(206, 29, 29);
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+#nav li:hover .subnav1,
+#nav li:hover .subnav2 {
+  display: block;
+  overflow: hidden; /* Ẩn phần thừa */
+}
+#nav .subnav1 a,
+#nav .subnav2 a {
+  width: 100%;
+  color: #000;
+  /* padding: 0 12px; */
+  line-height: 50px;
+}
+#nav .subnav1,
+#nav .subnav2 {
+  top: 100%;
+  left: 0;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav1 li:hover,
+#nav .subnav2 li:hover {
+  width: 100%;
+  color: #fff;
+  background-color: rgb(206, 29, 29);
+  height: 100%;
+  width: 100%;
+}
