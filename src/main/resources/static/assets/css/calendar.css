@@ -25,7 +25,7 @@ html {
   justify-content: space-between;
 }
 .caledar {
-  margin-right: 30%;
+  margin-right: auto;
 }
 .calendar li a {
   color: #fff;
@@ -104,7 +104,7 @@ html {
   width: 100%;
 }
 .slider {
-  position: relative;
+  /* position: relative; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://resources.motogp.pulselive.com/photo-resources/2024/09/09/375bd167-7c14-45e6-8fa8-9a5fd344fe34/report-MSN-TEST.jpg?width=1440&height=810");
   height: 100%;
