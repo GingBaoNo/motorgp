@@ -9,7 +9,7 @@ html {
 .main {
 }
 .header {
-  height: 60px;
+  height: auto;
   background-color: #000;
   position: fixed;
 

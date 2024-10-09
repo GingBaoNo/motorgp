@@ -34,4 +34,9 @@ public class HomeController {
     public String result(){
         return "results";
     }
+
+    @GetMapping("/standing.html")
+    public String standing(){
+        return "standing";
+    }
 }
