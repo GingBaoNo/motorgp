@@ -17,11 +17,6 @@ html {
   z-index: 1000;
 }
 
-.logo {
-  height: 60px;
-  width: 60px;
-}
-
 #nav {
   display: flex; /* Flexbox để căn ngang các phần tử */
   align-items: center; /* Căn giữa các phần tử theo chiều dọc */
@@ -45,7 +40,7 @@ html {
 }
 #nav li a {
   text-decoration: none;
-  line-height: 60px;
+  /* line-height: 60px; */
   display: inline-block;
   padding: 0 30px;
   border-radius: 10px; /*bo tròn lại*/
@@ -60,8 +55,8 @@ html {
 }
 
 .logo {
-  height: 40px;
-  width: 50px;
+  height: 50px;
+  width: 60px;
 }
 #nav li:hover .subnav1,
 #nav li:hover .subnav2 {

@@ -10,7 +10,15 @@ import java.util.Optional;
 
 @Repository
 public interface RiderRepository extends JpaRepository<Rider, Integer> {
+    // Tìm kiếm rider theo tên
     List<Rider> findByName(String name);
-    Optional<Rider> findById(Integer id);
-    List<Rider> findByTeam(Team team);
+    
+    // Tìm kiếm rider theo quốc gia
+    List<Rider> findByCountry(String country);
+    
+    // Tìm kiếm rider theo team
+    List<Rider> findByTeamId(Integer teamId);
+    
+    // Tìm kiếm rider theo số xe
+    List<Rider> findByRiderNumber(Integer riderNumber);
 }

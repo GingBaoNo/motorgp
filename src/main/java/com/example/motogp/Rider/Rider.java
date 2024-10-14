@@ -1,12 +1,10 @@
 package com.example.motogp.Rider;
 
 
-import com.example.motogp.Team.Team;  // Đảm bảo import lớp Team
+import com.example.motogp.Team.Team;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -16,10 +14,13 @@ import jakarta.persistence.Table;
 @Table(name = "riders")
 public class Rider {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "name")
     private String name;
+    
+    @Column(name = "country")
     private String country;
 
     @ManyToOne
@@ -29,19 +30,25 @@ public class Rider {
     @Column(name = "rider_number", nullable = false)
     private Integer riderNumber;
 
-    // Constructor rỗng
+    @Column(name = "img_link")
+    private String imgUrl;
+
+    
     public Rider() {
     }
+    
 
-    // Constructor với tham số
-    public Rider(String name, String country, Team team, Integer riderNumber) {
+    
+    public Rider(Integer id, String name, String country, Team team, Integer riderNumber, String imgUrl) {
+        this.id = id;
         this.name = name;
         this.country = country;
         this.team = team;
         this.riderNumber = riderNumber;
+        this.imgUrl = imgUrl;
     }
 
-    // Getters và Setters
+
     public Integer getId() {
         return id;
     }
@@ -82,16 +89,13 @@ public class Rider {
         this.riderNumber = riderNumber;
     }
 
+
     @Override
     public String toString() {
-        return "Rider{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", country='" + country + '\'' +
-                ", team=" + (team != null ? team.getTeamName() : "null") +
-                ", riderNumber=" + riderNumber +
-                '}';
+        return "Rider [id=" + id + ", name=" + name + ", country=" + country + ", team=" + team + ", riderNumber="
+                + riderNumber + ", imgUrl=" + imgUrl + "]";
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -104,5 +108,13 @@ public class Rider {
     @Override
     public int hashCode() {
         return id.hashCode();
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

@@ -12,33 +12,39 @@
   </head>
   <body>
     <div class="main">
+      <!-- Phần header được thay thế bằng fragment -->
       <div th:replace="~{home/fragments/header :: header}"></div>
+      <!-- Phần slider cũng được thay thế -->
       <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
 
       <div class="content">
+        <!-- Thông tin chính, ví dụ về thông báo -->
         <div class="news">
           <div class="image"></div>
           <span>Official</span>
         </div>
 
+        <!-- Danh sách tay đua dưới dạng thẻ card -->
         <div class="row place-list">
-          <!-- Danh sách tay đua -->
+          <!-- Vòng lặp Thymeleaf để hiển thị mỗi tay đua trong danh sách -->
           <div th:each="rider : ${riders}" class="rider-card">
+            <!-- Hiển thị hình ảnh của tay đua -->
             <img
-              th:src="${rider.team.logoUrl}"
-              alt="${rider.name}"
+              th:src="${rider.imgUrl}"
+              alt="Image of [[${rider.name}]]"
               class="riders-img"
             />
+            <!-- Hiển thị số xe của tay đua -->
             <span class="id-rider" th:text="${rider.riderNumber}"></span>
+            <!-- Hiển thị tên tay đua -->
             <div class="rider-list__info-name">
               <span th:text="${rider.name}"></span>
-              <span th:text="${rider.lastName}"></span>
-              <!-- Đảm bảo lastName có trong lớp Rider -->
             </div>
+            <!-- Hiển thị quốc gia và đội của tay đua -->
             <div class="country">
               <img
                 th:src="${rider.team.countryFlagUrl}"
-                alt="${rider.country}"
+                alt="Flag of [[${rider.country}]]"
                 class="card-flag-country"
               />
               <span class="name-country" th:text="${rider.country}"></span>
@@ -50,6 +56,7 @@
           </div>
         </div>
 
+        <!-- Phần footer được thay thế bằng fragment -->
         <div th:replace="~{home/fragments/footer :: footer}"></div>
       </div>
     </div>
