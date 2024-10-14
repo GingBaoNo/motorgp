@@ -37,8 +37,6 @@ public class Rider {
     public Rider() {
     }
     
-
-    
     public Rider(Integer id, String name, String country, Team team, Integer riderNumber, String imgUrl) {
         this.id = id;
         this.name = name;

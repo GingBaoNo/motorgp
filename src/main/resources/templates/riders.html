@@ -1,64 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh Sách Tay Đua</title>
-    <link
-      rel="stylesheet"
-      href="./assets/themify-icons-font/themify-icons/themify-icons.css"
-    />
-    <link rel="stylesheet" href="./assets/css/riders.css" />
-  </head>
-  <body>
-    <div class="main">
-      <!-- Phần header được thay thế bằng fragment -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/riders.css">
+</head>
+<body>
+    <div class="main" >
       <div th:replace="~{home/fragments/header :: header}"></div>
-      <!-- Phần slider cũng được thay thế -->
-      <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
 
-      <div class="content">
-        <!-- Thông tin chính, ví dụ về thông báo -->
-        <div class="news">
-          <div class="image"></div>
-          <span>Official</span>
-        </div>
+        <div th:replace="~{riderteam/fragments/slider :: slider}"></div>
 
-        <!-- Danh sách tay đua dưới dạng thẻ card -->
-        <div class="row place-list">
-          <!-- Vòng lặp Thymeleaf để hiển thị mỗi tay đua trong danh sách -->
-          <div th:each="rider : ${riders}" class="rider-card">
-            <!-- Hiển thị hình ảnh của tay đua -->
-            <img
-              th:src="${rider.imgUrl}"
-              alt="Image of [[${rider.name}]]"
-              class="riders-img"
-            />
-            <!-- Hiển thị số xe của tay đua -->
-            <span class="id-rider" th:text="${rider.riderNumber}"></span>
-            <!-- Hiển thị tên tay đua -->
-            <div class="rider-list__info-name">
-              <span th:text="${rider.name}"></span>
+        <div class="content">
+            <div class="news">
+                <div class="image"></div>
+                <span>Official</span>
             </div>
-            <!-- Hiển thị quốc gia và đội của tay đua -->
-            <div class="country">
-              <img
-                th:src="${rider.team.countryFlagUrl}"
-                alt="Flag of [[${rider.country}]]"
-                class="card-flag-country"
-              />
-              <span class="name-country" th:text="${rider.country}"></span>
-              <span
-                class="rider-list__details-team"
-                th:text="${rider.team.name}"
-              ></span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Phần footer được thay thế bằng fragment -->
-        <div th:replace="~{home/fragments/footer :: footer}"></div>
-      </div>
-    </div>
-  </body>
+                    <div class="row place-list">
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=700&width=900" 
+                            alt="ITALY" 
+                            class="riders-img">
+                                <span class="id-rider">#FB1</span>
+                                <div class="rider-list__info-name">
+                                    <span>Francesco</span>
+                                    <span>Bagnaia</span> </div>
+                            <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/it.svg"
+                                alt="ITALY"
+                                class="card-flag-country"/>
+                                <span class="name-country">ITALY</span>
+                                <span class="rider-list__details-team">Ducati Lenovo Team</span>
+                            </div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/804f0106-d53b-4052-bbd4-23e41f093ae6/rider-bio_johannzarco.png?height=400&width=600" 
+                            alt="FRANCE" 
+                            class="riders-img">
+                                <span class="id-rider">#JZ5</span>
+                                <div class="rider-list__info-name">
+                                    <span>Johann</span>
+                                    <span>Zarco</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/fr.svg"
+                                alt="FRANCE"
+                                class="card-flag-country"/>
+                                <span class="name-country">FRANCE</span>
+                                <span class="rider-list__details-team">LRC Honda</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a49cbe4-f2a9-4eb5-8e75-08b5387e6dea/rider-bio_lucamarini.png?height=400&width=600" 
+                            alt="ITALY" 
+                            class="riders-img">
+                                <span class="id-rider">#LM10</span>
+                                <div class="rider-list__info-name">
+                                    <span>Luca</span>
+                                    <span>Marini</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/it.svg"
+                                alt="ITALY"
+                                class="card-flag-country"/>
+                                <span class="name-country">ITALY</span>
+                                <span class="rider-list__details-team">Repsol Honda Team</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/5cc9bb88-4d65-4498-9808-f36bde7936f1/rider-bio_maverickvin-ales.png?height=400&width=600" 
+                            alt="SPAIN" 
+                            class="riders-img">
+                                <span class="id-rider">#MV12</span>
+                                <div class="rider-list__info-name">
+                                    <span>Maverick</span>
+                                    <span>Viñales</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/es.svg"
+                                alt="SPAIN"
+                                class="card-flag-country"/>
+                                <span class="name-country">SPAIN</span>
+                                <span class="rider-list__details-team">Aprilia Racing</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/80de8d72-d1b8-4b41-90b0-928467018ced/rider-bio_fabioquartararo.png?height=400&width=600" 
+                            alt="FRANCE" 
+                            class="riders-img">
+                                <span class="id-rider">#FQ20</span>
+                                <div class="rider-list__info-name">
+                                    <span>Fabio </span>
+                                    <span>Quartararo</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/fr.svg"
+                                alt="FRANCE"
+                                class="card-flag-country"/>
+                                <span class="name-country">FRANCE</span>
+                                <span class="rider-list__details-team">Monster Enegy Yamaha MotoGP™</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/ca002749-a487-432f-879e-e44969678daa/rider-bio_eneabastianini.png?height=400&width=600" 
+                            alt="ITALY" 
+                            class="riders-img">
+                                <span class="id-rider">#FQ20</span>
+                                <div class="rider-list__info-name">
+                                    <span>Enea</span>
+                                    <span>Bastianini</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/ca002749-a487-432f-879e-e44969678daa/rider-bio_eneabastianini.png?height=400&width=600"
+                                alt="FRANCE"
+                                class="card-flag-country"/>
+                                <span class="name-country">ITALY</span>
+                                <span class="rider-list__details-team">Ducati Lenovo Team</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/08/02/e1d21120-21e6-43c8-83f0-2707634800a7/25-Raul-Fernandez-MotoGPrider.png?height=400&width=600" 
+                            alt="" 
+                            class="riders-img">
+                                <span class="id-rider">#FB1</span>
+                                <div class="rider-list__info-name">
+                                    <span>Raul </span>
+                                    <span>Fernandez</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/es.svg"
+                                alt="SPAIN"
+                                class="card-flag-country"/>
+                                <span class="name-country">SPAIN</span>
+                                <span class="rider-list__details-team">Trackhouse Racing</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/03/07/0185f144-d78f-4880-9d4c-1fc70aef68dd/21-Franco-Morbidelli-Official-Rider_DSC9540.png?height=400&width=600" 
+                            alt="" 
+                            class="riders-img">
+                                <span class="id-rider">#FB1</span>
+                                <div class="rider-list__info-name">
+                                    <span>Franco </span>
+                                    <span>Morbidelli</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/it.svg"
+                                alt="ITALY"
+                                class="card-flag-country"/>
+                                <span class="name-country">ITALY</span>
+                                <span class="rider-list__details-team">Prima Pramac Racing</span></div>
+                           
+                        </div>
+                        <div class="rider-card">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/08f27eee-d7f1-4e4d-a94f-f6b205d15b92/rider-bio_takaakinakagami.png?height=400&width=600" 
+                            alt="" 
+                            class="riders-img">
+                                <span class="id-rider">#FB1</span>
+                                <div class="rider-list__info-name">
+                                    <span>Takaaki </span>
+                                    <span>Nakagami</span> </div>
+                                <div class="country">
+                                <img
+                                src="https://static-files.motogp.pulselive.com/assets/flags/jp.svg"
+                                alt="JAPAN"
+                                class="card-flag-country"/>
+                                <span class="name-country">JAPAN</span>
+                                <span class="rider-list__details-team">LRC Honda</span></div>
+                           
+                        </div>
+                    </div>
+                       
+                    <div th:replace="~{home/fragments/footer :: footer}"></div>
+</body>
 </html>
